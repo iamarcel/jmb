@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<main class="gallery">
+  <!-- MAIN CONTENT -->
+  <section class="gallery__wallscape">
+    <figure>
+      <img src="{{ .Params.image }}">
+      <figcaption>
+        {{ if .Params.title }}
+        <h3>&ldquo;{{ .Params.title }}&rdquo;</h3>
+        {{ end }}
+        {{ if .Params.description }}
+        <p>{{ .Params.description }}</p>
+        {{ end }}
+      </figcaption>
+    </figure>
+  </section>
+  <p><a href="..">Back to the galleries</a></p>
+</main>
+
+{{ partial "footer.html" . }}
