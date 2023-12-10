@@ -4,7 +4,12 @@
   <!-- MAIN CONTENT -->
   <section class="gallery__wallscape">
     <figure>
-      <img src="{{ .Params.image }}">
+      <div style="display: flex; flex-direction: row; gap: 20px;">
+        <img src="{{ .Params.image }}" style="flex-shrink: 1">
+        {{ if .Params.image2 }}
+        <img src="{{ .Params.image2 }}" style="flex-shrink: 1">
+        {{ end }}
+      </div>
       <figcaption>
         {{ if .Params.title }}
         <h3>&ldquo;{{ .Params.title }}&rdquo;</h3>
