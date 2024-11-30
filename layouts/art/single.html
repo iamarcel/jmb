@@ -20,7 +20,7 @@
       </figcaption>
     </figure>
   </section>
-  <p><a href="..">Back to the galleries</a></p>
+  <p><a href="{{ relref . (printf "/galleries/%s" (.File.Dir | replaceRE "galleries/(\\d{4}).*" "$1")) }}">Back to the galleries</a></p>
 </main>
 
 {{ partial "footer.html" . }}
